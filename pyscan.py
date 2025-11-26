@@ -72,6 +72,7 @@ else:
     print("[i] Using " + str(DELAY) + " seconds delay (random)")
 print("[i] Save output: " + str(OUTPUT_FILE))
 print("[i] Verbose mode: " + str(VERBOSE))
+print("")
 
 RESULTS_IP = {}
 for port in ports:
@@ -84,7 +85,6 @@ def getDelay():
         return DELAY
 
 def scan_ip(ip_address):
-    print("")
     for port in ports:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(0.2)
